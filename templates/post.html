@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Linking to the Google Fonts stylesheet to use the Raleway font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <!-- Linking to the CSS file for styling -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <!-- Displaying the title of the blog post -->
+            <h1>{{post.title}}</h1>
+            <!-- Displaying the subtitle of the blog post -->
+            <h2>{{post.subtitle}}</h2>
+            <!-- Displaying the body of the blog post -->
+            <p>{{post.body}}</p>
+        </div>
+    </div>
+</div>
+<!-- Adding a footer to the page -->
+<footer>
+    <p>Made with ♥️ in London.</p>
+</footer>
+</body>
+</html>

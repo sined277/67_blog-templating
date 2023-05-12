@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Linking to the Google Fonts stylesheet to use the Raleway font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <!-- Linking to the CSS file for styling -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <!-- Looping over all the blog posts and displaying them on the page -->
+    {% for post in all_posts: %}
+    <div class="content">
+        <div class="card">
+            <h2>{{post.title}}</h2>
+            <p>{{post.subtitle}} </p>
+            <!-- Linking to the show_post route with the index of the current post as a parameter -->
+            <a href="{{ url_for('show_post', index=post.id) }}">Read</a>
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+<!-- Adding a footer to the page -->
+<footer>
+    <p>Made with ♥️ in London.</p>
+</footer>
+</body>
+</html>
